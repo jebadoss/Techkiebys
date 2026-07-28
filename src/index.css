@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: #F7F5F0;
+  font-family: 'Inter', sans-serif;
+  color: #1B2430;
+}
+
+/* Perforated ticket-stub tear line */
+.tear-line {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #C9C4B8 0,
+    #C9C4B8 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  width: 1px;
+}
+
+:focus-visible {
+  outline: 2px solid #FFB020;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media print {
+  body {
+    background-color: white !important;
+  }
+  nav, aside, .print-hidden {
+    display: none !important;
+  }
+  main {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+}
